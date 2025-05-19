@@ -15,10 +15,35 @@ body {
 }
 
 nav{
-      color: white;
-      font-size: 20px;
+      margin-top: 1.5em;
+      display: flex;
+      font-size: 70%;
+      gap: 20%;
+      z-index: 2;
+      justify-content: center;
 }
 
+@media (min-width: 700px) {
+
+      nav{
+      font-size: 170%;
+}
+}
+
+#StartWebsite
+{
+      
+      color: white;
+}
+
+#currency-converter
+{
+      color: white;
+}
+
+#data-converter{
+      color: white;
+}
 
 header {
 order: -1;
