@@ -1,0 +1,82 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d3e66;
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 5rem 0rem 5rem;
+}
+
+
+.headerlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rechner {
+    background-color: white;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid;
+    padding: 1rem;
+
+
+}
+
+.nav a {
+
+}
+
+.selection {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount {
+
+}
+
+.dropdown {
+    display: flex;
+
+}
+
+.first-selection,
+.second-selection {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+
+.apply {
+    display: flex;
+    justify-content: flex-end;
+}
