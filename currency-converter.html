@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/currency_style.css" />
-    <title>Currency Converter</title>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="headerlines">
-        <h2>Currency Converter</h2>
-        <h2>Welcome to the most trusted currency tool in the world</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/currency_style.css" />
+  <title>Currency Converter</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="headerlines">
+      <h2>Currency Converter</h2>
+      <h2>Welcome to the most trusted currency tool in the world</h2>
+    </div>
+    <div class="rechner">
+      <div class="nav">
+        <a class="link" href="currency-converter.html">Currency</a>
+        <a class="link" href="data-converter.html">Data</a>
+        <a class="link" href="time-converter.html">Time</a>
       </div>
-      <div class="rechner">
-        <div class="nav">
-          <a class="link" href="currency-converter.html">Currency</a>
-          <a class="link" href="data-converter.html">Data</a>
-          <a class="link" href="time-converter.html">Time</a>
+      <div class="selection">
+        <div class="amount">
+          <input type="text" placeholder="1 $" />
         </div>
-        <div class="selection">
-          <div class="amount">
-            <input type="text" placeholder="1 $" />
+        <div class="dropdown">
+          <div class="first-selection">
+            <label for="from-currency">From</label>
+            <select id="from-currency" name="from-currency">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
           </div>
-          <div class="dropdown">
-            <div class="first-selection">
-              <label for="from-currency">From</label>
-              <select id="from-currency" name="from-currency">
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-              </select>
-            </div>
-            <button class="Switch-arrows"></button>
-            <div class="second-selection">
-              <label for="from-currency">From</label>
-              <select id="to-currency" name="to-currency">
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-              </select>
-            </div>
+          <button class="Switch-arrows"></button>
+          <div class="second-selection">
+            <label for="from-currency">From</label>
+            <select id="to-currency" name="to-currency">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
           </div>
         </div>
+      </div>
 
-        <div class="apply">
-          <button class="button">Convert</button>
-        </div>
+      <div class="apply">
+        <button class="button">Convert</button>
       </div>
     </div>
-  </body>
+  </div>
+
+  <!-- This is the descriptive text. -->
+  <div>
+    <p>The Currency Converter allows you to convert money from one currency to another using the latest exchange rates.
+      Whether you're traveling, shopping online, or sending money abroad, this tool helps you see how much your money is
+      worth in another country.</p>
+  </div>
+  <footer>
+    <p>© 2025 Currency Converter. All rights reserved.</p>
+  </footer>
+</body>
+
 </html>
