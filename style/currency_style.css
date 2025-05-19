@@ -5,8 +5,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2d3e66;
+  background-color: grey    ; /* Geändert von #2d3e66 */
   width: 100%;
+  font-family: Arial, sans-serif; /* Hinzugefügt für Konsistenz */
 }
 
 .wrapper {
@@ -33,8 +34,10 @@ body {
   padding: 1rem 2rem 1rem 2rem;
   display: flex;
   flex-direction: column;
-  gap:2rem;
+  gap: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hinzugefügt für Konsistenz */
 }
+
 
 .nav {
   display: flex;
@@ -101,6 +104,11 @@ body {
   padding: 2rem 1.5rem 1.5rem 0.5rem;
   border-radius: 0.5rem;
   border-color: grey;
+}
+
+.number:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
 }
 
 .amount p {
@@ -204,11 +212,23 @@ body {
     font-size: 1.2rem;
 }
 
+.apply button:hover {
+
+    cursor: pointer;
+    background-color: #e0e0e0;
+
+}
+
 .result {
     display: flex;
     justify-content: center;
     align-items: center;
-   
     width: 100%;
+}
+
+.result-number {
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.5rem;
 
 }
