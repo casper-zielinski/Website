@@ -14,6 +14,10 @@ body {
     position: relative;
 }
 
+nav{
+      color: white;
+      font-size: 20px;
+}
 
 
 header {
@@ -52,6 +56,7 @@ padding: 0.5rem;
 }
 
 main {
+margin: 2%;
 margin-top: -3em;
 order: 0;
 background-color: white;
@@ -79,8 +84,8 @@ z-index: 1;
       background-color: white;
       display: none;
       position: absolute; /* Inhalt */
-      top: 100%; /* Platzierung unter dem Button */
-      left: 20%;
+      top: 49%; /* Platzierung unter dem Button */
+      left: 22.5%;
       z-index: 2; /* Höherer Z-Index */
       border: rgb(200, 200, 200) solid 1px;
       border-radius: 10px;
@@ -94,7 +99,6 @@ z-index: 1;
       display: none;
       position: absolute; /* Inhalt */
       top: 100%; /* Platzierung unter dem Button */
-      left: 20%;
       z-index: 2; /* Höherer Z-Index */
       border: rgb(200, 200, 200) solid 1px;
       border-radius: 10px;
