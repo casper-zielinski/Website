@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Converter</title>
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <!-- <link rel="stylesheet" href="style/style.css"/> -->
     <link rel="stylesheet" href="style/currency_style.css" />
 </head>
 
 <body>
-    <header>
-
-    </header>
-
     <main>
         <div class="wrapper">
             <div class="headerlines">
@@ -31,7 +27,10 @@
 
                 <div class="selection">
                     <div class="amount">
-                        <input class="number" type="text" placeholder="8 Bit" />
+                        <div class="input-wrapper">
+                            <input class="number" type="text" placeholder="8 Bit" />
+                            <p>Data type</p>
+                        </div>
                     </div>
                     <div class="dropdown">
                         <div class="first-selection">
@@ -61,6 +60,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="apply">
                     <button class="button">Convert</button>
                 </div>
@@ -69,15 +69,15 @@
                     <input class="result-number" type="text" placeholder="Output" />
                 </div>
             </div>
-
-            <!-- This is the descriptive text. -->
-            <!-- <div>
-                <p>The Data Size Converter lets you quickly switch between different units of digital storage, like
-                    bytes,
-                    kilobytes, megabytes, gigabytes, and more. It’s a helpful tool for understanding file sizes,
-                    managing
-                    storage on your devices, or working with data limits.</p>
-            </div> -->
+        </div>
+        <!-- This is the descriptive text. -->
+        <!-- <div>
+            <p>The Data Size Converter lets you quickly switch between different units of digital storage, like
+                bytes,
+                kilobytes, megabytes, gigabytes, and more. It’s a helpful tool for understanding file sizes,
+                managing
+                storage on your devices, or working with data limits.</p>
+        </div> -->
     </main>
 
     <!-- <footer>
