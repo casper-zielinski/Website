@@ -14,34 +14,45 @@
         <h2>Welcome to the most trusted currency tool in the world</h2>
       </div>
       <div class="rechner">
-        <div class="nav">
-          <a class="link" href="currency-converter.html">Currency</a>
-          <a class="link" href="data-converter.html">Data</a>
-          <a class="link" href="time-converter.html">Time</a>
-        </div>
+        <ul class="nav">
+          <li>
+            <a class="active-link" href="currency-converter.html">Currency</a>
+          </li>
+          <li><a class="link" href="data-converter.html">Data</a></li>
+          <li><a class="link" href="time-converter.html">Time</a></li>
+        </ul>
         <div class="selection">
           <div class="amount">
-            <input type="text" placeholder="1 $" />
+            <div class="input-wrapper">
+              <input class="number" type="text" placeholder="1,00 $" />
+              <p>Betrag</p>
+            </div>
           </div>
           <div class="dropdown">
             <div class="first-selection">
-              <label for="from-currency">From</label>
-              <select id="from-currency" name="from-currency">
+              <p>From</p>
+              <select class="from-currency" name="from-currency">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
               </select>
             </div>
-            <button class="Switch-arrows"></button>
+
+            <button class="switch-arrows">
+                <img src="resources/images/swap_horiz_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+            </button>
+       
             <div class="second-selection">
-              <label for="from-currency">From</label>
-              <select id="to-currency" name="to-currency">
+              <p>To</p>
+              <select class="to-currency" name="to-currency">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
               </select>
             </div>
           </div>
+
+               
         </div>
 
         <div class="apply">

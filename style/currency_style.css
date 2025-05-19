@@ -1,82 +1,183 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2d3e66;
-    width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3e66;
+  width: 100%;
 }
 
 .wrapper {
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 1rem 5rem 0rem 5rem;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 10rem 0rem 10rem;
 }
-
 
 .headerlines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .rechner {
-    background-color: white;
-    width: 100%;
-    border-radius: 1rem;
-    padding: 1rem 2rem 1rem 2rem;
+  background-color: white;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid;
-    padding: 1rem;
-
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid;
+  border-radius: 1rem;
+  border-color: #e0e0e0;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  gap: 2rem;
+  line-height: 1rem;
+  list-style-type: none;
+  font-size: 1.5rem;
 }
 
-.nav a {
+.link {
+  display: block;
+  text-decoration: none;
+  color: grey;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: solid transparent;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
 
+.link:hover {
+  background-color: #e0e0e0;
+  border: solid;
+  border-radius: 1rem;
+}
+
+.active-link {
+  display: block;
+  background-color: grey;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: solid;
+  border-radius: 1rem;
+  color: white;
+  text-decoration: none;
 }
 
 .selection {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  width: 100%;
 }
 
 .amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.input-wrapper {
+  position: relative;
+}
+
+.number {
+  color: black;
+  font-size: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border-color: grey;
+}
+
+.amount p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.7rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .dropdown {
-    display: flex;
+  position: relative; /* wichtig für absolute Positionierung */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.switch-arrows {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid grey; /* klarer Rahmen */
+  border-radius: 50%;
+  padding: 0; /* Padding raus, sonst schrumpft Inhalt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  
 
 }
+
+.switch-arrows:hover {
+    background-color: #e0e0e0;
+}
+.switch-arrows img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0.3);
+  object-fit: contain;
+}
+
+
 
 .first-selection,
 .second-selection {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
+  position: relative;
 }
 
+.first-selection p,
+.second-selection p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  margin-left: 0.9rem;
+}
 
+.from-currency,
+.to-currency {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border-color: grey;
+  padding: 2rem 10rem 1.5rem 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.from-currency:hover,
+.to-currency:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
 
 .apply {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
