@@ -2,16 +2,29 @@
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownContent = document.getElementById("TimeDropdown");
 
+const dropdownButton2 = document.getElementById("dropdownButton2");
+const dropdownContent2 = document.getElementById("TimeDropdown2");
+
 dropdownButton.addEventListener("click", function() {
   dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
 });
 
-const dropdownButton2 = document.getElementById("dropdownButton2");
-const dropdownContent2 = document.getElementById("TimeDropdown2");
+document.addEventListener("click", (event) => {
+  if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)
+  || dropdownButton2.contains(event.target) && dropdownContent2.contains(event.target)) {
+  dropdownContent.style.display = "none";
+}});
+
 
 dropdownButton2.addEventListener("click", function() {
   dropdownContent2.style.display = (dropdownContent2.style.display === "block") ? "none" : "block";
 });
+
+document.addEventListener("click", (event) => {
+  if (!dropdownButton2.contains(event.target) && !dropdownContent2.contains(event.target)
+  || dropdownButton.contains(event.target) && dropdownContent.contains(event.target)) {
+  dropdownContent2.style.display = "none";
+}});
 
 const dropdownItems = document.querySelectorAll("#TimeDropdown a");
 const dropdownItems2 = document.querySelectorAll("#TimeDropdown2 a");
@@ -27,6 +40,7 @@ dropdownItems.forEach(item => {
     dropdownButton.textContent = selectedTimeUnit; // Button-Text aktualisieren
 
     console.log("Ausgewählt für Dropdown 1:", selectedTimeUnit);
+    e.preventDefault();
   });
 });
 
@@ -41,16 +55,24 @@ dropdownItems2.forEach(item => {
   });
 });
 
-function Convert() {
-  let inputTime = document.getElementById("inputTime").value;
-  const outputTime = document.getElementById("converted-time");
+
+
+function Convert(e) {
+
+  e.preventDefault(); // Verhindert das Standardverhalten des Formulars
+  let inputTime = document.getElementById("inputTime").value; // Eingabewert
+  const outputTime = document.getElementById("converted-time"); // Ausgabe-Element / Konvertierte Zeit
 
   if (inputTime === "") {
       alert("Bitte eine Zeit eingeben.");
       return;
-    }
-  else{
-    if (selectedTimeUnit === "Seconds") {
+  }
+  else if (isNaN(inputTime)) { // Überprüfen, ob die Eingabe eine Zahl ist
+      alert("Bitte eine gültige Zahl eingeben.");
+      return;
+  } //Hier werden die Einheiten umgewandelt
+  else {
+    if (selectedTimeUnit === "Seconds") { //von Sekunden in andere Einheiten
 
       if (selectedTimeUnit2 === "Hours") {
         let result = (inputTime / 3600).toFixed(4);
@@ -84,12 +106,207 @@ function Convert() {
         return result;
       }
     }
+    else if (selectedTimeUnit === "Minutes") { // von Minuten in andere Einheiten
+      if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime / 60).toFixed(2);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 60).toFixed(2);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime / 1440).toFixed(8);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime / 10080).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime / 43800).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 525600).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Hours") { // von Stunden in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 3600).toFixed(2);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 60).toFixed(2);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime / 24).toFixed(8);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime / 168).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime / 730).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 8760).toFixed(12);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Days") { // von Tagen in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 86400);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 1440);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 24);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime / 7).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime / 30.44).toFixed(8);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 365).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Days") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Weeks") { // von Wochen in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 604800);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 10080);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 168);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 7);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime / 4.345).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 52.143).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Weeks") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Months") { // von Monaten in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 2592000);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 43800);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 730);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 30.44).toFixed(6);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime * 4.345).toFixed(6);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 12).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Years") { // von Jahren in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 31536000);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 525600);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 8760);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 365);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime * 52.143);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime * 12).toFixed(2);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Years") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
     else{
       alert("Bitte eine Zeit eingeben.");
       return;
     }
   }
-
+}
 }
 
-
+document.getElementById("copy-button").addEventListener("click", () => {
+  const outputTime = document.getElementById("converted-time").value; // Wert des Ausgabe-Elements
+  
+  navigator.clipboard.writeText(outputTime)
+    .then(() => {
+      alert("Kopiert in die Zwischenablage ✅");
+    })
+    .catch(err => {
+      console.error("Fehler beim Kopieren:", err);
+    });
+  });
