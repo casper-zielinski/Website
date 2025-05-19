@@ -1,0 +1,21 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header, main, footer {
+max-width: 900px;
+margin: auto;
+padding: 1rem;
+}
+
+header {
+background: #f5f5f5;
+}
+
+@media (max-width: 600px) {
+header, main, footer {
+padding: 0.5rem;
+}
+}
