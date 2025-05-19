@@ -10,7 +10,11 @@
 </head>
 
 <body>
-
+    <nav>
+        <a link href="index.html">Home</a>
+        <a link href="currency-converter.html">Calculator</a>
+        <a link href="data-converter.html">Converter</a>
+    </nav>
     <header>
         <h1>Time Converter</h1>
 
@@ -27,29 +31,33 @@
     <br>
     <main>
         <form id="time-form">
-            <label for="time">Enter time :</label>
-            <button id="dropdownButton">HH:MM AM/PM</button>
+            <label for="time">Time to Convert :</label><br>
+            <button id="dropdownButton">Seconds</button>
 
 
             <div class="dropdown-menu" id="TimeDropdown">
-                <a href="#">Eintrag 1</a><br>
-                <a href="#">Eintrag 2</a><br>
-                <a href="#">Eintrag 3</a><br>
-                <a href="#">Eintrag 4</a><br>
-                <a href="#">Eintrag 5</a><br>
+                <a href="#">Seconds</a><br>
+                <a href="#">Minutes</a><br>
+                <a href="#">Hours</a><br>
+                <a href="#">Days</a><br>
+                <a href="#">Weeks</a><br>
             </div>
 
             <input type="text" id="time" name="time" required>
+          
+            <br>
             <button id="dropdownButton2">Convert to</button>
 
             <div class="dropdown-menu2" id="TimeDropdown2">
-                <a href="#">Eintrag 1</a><br>
-                <a href="#">Eintrag 2</a><br>
-                <a href="#">Eintrag 3</a><br>
-                <a href="#">Eintrag 4</a><br>
-                <a href="#">Eintrag 5</a><br>
+                <a href="#">Seconds</a><br>
+                <a href="#">Minutes</a><br>
+                <a href="#">Hours</a><br>
+                <a href="#">Days</a><br>
+                <a href="#">Weeks</a><br>
             </div>
-
+            <br>
+            <br>
+             <button id="Convertbutton">CONVERT</button>
 
 
         </form>
