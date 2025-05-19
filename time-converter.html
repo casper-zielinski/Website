@@ -5,9 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/time-converter.css">
+    <script src="script/timeconverter.js" defer></script>
 </head>
 
 <body>
+    <main>
+        <h1>Time Converter</h1>
+      
+        <form id="time-form">
+            <label for="time">Enter time :</label>
+            <button id="dropdownButton">HH:MM AM/PM</button>
+
+            
+            <div class="dropdown-menu" id="TimeDropdown">
+                <a href="#">Eintrag 1</a><br>
+                <a href="#">Eintrag 2</a><br>
+                <a href="#">Eintrag 3</a><br>
+                <a href="#">Eintrag 4</a><br>
+                <a href="#">Eintrag 5</a><br>
+            </div>
+            
+            <input type="text" id="time" name="time" required>
+            <button type="submit">Convert</button>
+            
+        </form>
+        <div id="result">
+            <h2>Converted Time:</h2>
+            <p id="converted-time"></p>
+        </div>
+   
+    
+        <p>&copy; 2023 Time Converter</p>
+        <form id="converted-time-form">
+            <label for="converted-time">Converted Time:</label>
+            <input type="text" id="converted-time" name="converted-time" readonly>
+            <button type="button" id="copy-button" onclick="copyText()">Copy</button>
+        </form>
+    </main>
+
 
 </body>
 

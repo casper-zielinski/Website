@@ -1,0 +1,20 @@
+#time-form{
+      position: relative;
+}
+
+#TimeDropdown{
+      text-align: center;
+      width: 20%;
+      background-color: white;
+      display: none;
+      position: absolute; /* Inhalt */
+      top: 100%; /* Platzierung unter dem Button */
+      left: 0;
+      z-index: 1; /* Höherer Z-Index */
+}
+
+body
+{
+  background-color: rgb(93, 110, 125);
+}
+
