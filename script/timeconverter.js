@@ -100,7 +100,23 @@ function Convert(e) {
         let result = (inputTime / 2592000).toFixed(10);
         outputTime.value = result;
         return result;
-      } else if (selectedTimeUnit2 === "Years") {
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 2419200).toFixed(10);
+        outputTime.value = result;
+        return result;    
+      } 
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 2592000).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime / 2678400).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Years") {
         let result = (inputTime / 31536000).toFixed(12);
         outputTime.value = result;
         return result;
@@ -125,6 +141,21 @@ function Convert(e) {
         return result;
       } else if (selectedTimeUnit2 === "Months") {
         let result = (inputTime / 43800).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 40320).toFixed(10);
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 43200).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime / 44640).toFixed(10);
         outputTime.value = result;
         return result;
       } else if (selectedTimeUnit2 === "Years") {
@@ -154,7 +185,23 @@ function Convert(e) {
         let result = (inputTime / 730).toFixed(10);
         outputTime.value = result;
         return result;
-      } else if (selectedTimeUnit2 === "Years") {
+      } 
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 672).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 720).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime / 744).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } 
+      else if (selectedTimeUnit2 === "Years") {
         let result = (inputTime / 8760).toFixed(12);
         outputTime.value = result;
         return result;
@@ -185,7 +232,23 @@ function Convert(e) {
         let result = (inputTime / 30.44).toFixed(8);
         outputTime.value = result;
         return result;
-      } else if (selectedTimeUnit2 === "Years") {
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 28).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 30).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime / 31).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+       else if (selectedTimeUnit2 === "Years") {
         let result = (inputTime / 365).toFixed(12);
         outputTime.value = result;
         return result;
@@ -214,6 +277,21 @@ function Convert(e) {
         outputTime.value = result;
         return result;
       } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime / 4.345).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 4).toFixed(10);
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 4.345).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
         let result = (inputTime / 4.345).toFixed(10);
         outputTime.value = result;
         return result;
@@ -249,7 +327,22 @@ function Convert(e) {
         let result = (inputTime * 4.345).toFixed(6);
         outputTime.value = result;
         return result;
-      } else if (selectedTimeUnit2 === "Years") {
+      } else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime / 0.9198423127).toFixed(6);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime / 0.98554543351).toFixed(6);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime / 1.016796875).toFixed(6);
+        outputTime.value = result;
+        return result;
+      } 
+       else if (selectedTimeUnit2 === "Years") {
         let result = (inputTime / 12).toFixed(12);
         outputTime.value = result;
         return result;
@@ -286,18 +379,34 @@ function Convert(e) {
         outputTime.value = result;
         return result;
       }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime * 12).toFixed(2);
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime * 12).toFixed(2);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime * 12).toFixed(2);
+        outputTime.value = result;
+        return result;
+      }
       else if (selectedTimeUnit2 === "Years") {
         let result = inputTime;
         outputTime.value = result;
         return result;
       }
+    }
     else{
       alert("Bitte eine Zeit eingeben.");
       return;
     }
   }
 }
-}
+
 
 document.getElementById("copy-button").addEventListener("click", () => {
   const outputTime = document.getElementById("converted-time").value; // Wert des Ausgabe-Elements

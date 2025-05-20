@@ -31,9 +31,12 @@ nav{
 }
 
 #StartWebsite
-{
-      
+{ 
       color: white;
+}
+
+#StartWebsite:hover{
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 #currency-converter
@@ -41,8 +44,16 @@ nav{
       color: white;
 }
 
+#currency-converter:hover{
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+}
+
 #data-converter{
       color: white;
+}
+
+#data-converter:hover{
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 header {
@@ -57,11 +68,12 @@ z-index: 0;
 }
 
 .bluelinecontainer {
-width: auto;
+width: 100%;
 height: 5em;
 z-index: 0;
 align-items: center;
 justify-content: center;
+transform: scale(1.155);
 }
 
 .blueline {
@@ -91,6 +103,10 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 z-index: 1;
 }
 
+main:hover {
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 #time-form{
       position: relative;
 }
@@ -100,6 +116,11 @@ z-index: 1;
       background-color: white;
       border: rgb(200, 200, 200) solid 1px;
       border-radius: 10px;
+}
+
+#time-form button:hover{
+      background-color: rgb(0, 0, 0);
+      color: white;
 }
 
 #TimeToConvertText
@@ -114,23 +135,56 @@ z-index: 1;
       background-color: white;
       display: none;
       position: absolute; /* Inhalt */
-      top: 25.2%; /* Platzierung unter dem Button */
+      top: 28.9%; /* Platzierung unter dem Button */
       z-index: 2; /* Höherer Z-Index */
       border: rgb(200, 200, 200) solid 1px;
       border-radius: 10px;
 }
 
+#TimeDropdown a{
+      color: black;
+      text-decoration: none;
+}
+
+#TimeDropdown a:hover{
+      background-color: rgb(0, 26, 255);
+      color: white;
+}
+
+#time-form input[type="text"]{
+      width: 60%;
+      background-color: white;
+      border: rgb(200, 200, 200) solid 1px;
+      border-radius: 10px;
+      padding: 1%;
+}
+
+#time-form input[type="text"]:hover{
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
 #TimeDropdown2{
+      color: black;
       text-align: left;
       width: 27.9%;
       padding: 1%;
       background-color: white;
       display: none;
       position: absolute; /* Inhalt */
-      top: 64.5%; /* Platzierung unter dem Button */
+      top: 69%; /* Platzierung unter dem Button */
       z-index: 2; /* Höherer Z-Index */
       border: rgb(200, 200, 200) solid 1px;
       border-radius: 10px;
+}
+
+#TimeDropdown2 a{
+      color: black;
+      text-decoration: none;
+}
+
+#TimeDropdown2 a:hover{
+      background-color: rgb(0, 26, 255);
+      color: white;
 }
 
 #Convertbutton
@@ -144,14 +198,26 @@ z-index: 1;
       transform: scale(1.5); 
 } 
 
+#converted-time-form input[type="text"]{
+      width: 40%;
+      background-color: white;
+      border: rgb(200, 200, 200) solid 1px;
+      border-radius: 10px;
+      padding: 1%;
+}
+
+#converted-time-form input[type="text"]:hover{
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
 @media (max-width: 600px) {
 
 #TimeDropdown{
-top: 27.8%;
+top: 28%;
 }
 
 #TimeDropdown2{
-top: 70%;
+top: 70.1%;
 }
 
 .bluelinecontainer {
