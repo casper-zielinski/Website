@@ -1,25 +1,26 @@
+/* Allgemeines Layout */
 html,
 body {
   height: 100%;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: grey    ; /* Geändert von #2d3e66 */
-  width: 100%;
-  font-family: Arial, sans-serif; /* Hinzugefügt für Konsistenz */
+  background-color: grey;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  /* Verhindert horizontales Scrollen */
 }
 
+/* Container */
 .wrapper {
-  min-height: 100%;
+  max-width: 1200px;
   width: 100%;
+  margin: 2rem auto 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
-  padding: 1rem 10rem 0rem 10rem;
 }
 
+/* Überschriften */
 .headerlines {
   display: flex;
   flex-direction: column;
@@ -27,18 +28,23 @@ body {
   justify-content: center;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+/* Hauptbox */
 .rechner {
   background-color: white;
   width: 100%;
   border-radius: 1rem;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hinzugefügt für Konsistenz */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Navigation */
 .nav {
   display: flex;
   flex-direction: row;
@@ -46,18 +52,16 @@ body {
   border: solid;
   border-radius: 1rem;
   border-color: #e0e0e0;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   gap: 2rem;
-  line-height: 1rem;
   list-style-type: none;
   font-size: 1.5rem;
 }
 
 .link {
-  display: block;
   text-decoration: none;
   color: grey;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 2rem;
   border: solid transparent;
   border-radius: 1rem;
   transition: all 0.3s ease;
@@ -66,25 +70,26 @@ body {
 .link:hover {
   background-color: #e0e0e0;
   border: solid;
-  border-radius: 1rem;
 }
 
 .active-link {
-  display: block;
   background-color: grey;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 2rem;
   border: solid;
   border-radius: 1rem;
   color: white;
   text-decoration: none;
 }
 
+/* Auswahlbereich */
 .selection {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* Für mobile Geräte */
   width: 100%;
 }
 
@@ -103,12 +108,12 @@ body {
   font-size: 1.5rem;
   padding: 2rem 1.5rem 1.5rem 0.5rem;
   border-radius: 0.5rem;
-  border-color: grey;
+  border: 1px solid grey;
 }
 
 .number:hover {
-    cursor: pointer;
-    background-color: #e0e0e0;
+  cursor: pointer;
+  background-color: #e0e0e0;
 }
 
 .amount p {
@@ -120,21 +125,21 @@ body {
   margin: 0;
 }
 
+/* Dropdown-Bereich */
 .dropdown {
-  position: relative; /* wichtig für absolute Positionierung */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .switch-arrows {
   position: absolute;
-  width: 4rem;
-  height: 4rem;
-  border: 1px solid grey; /* klarer Rahmen */
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid grey;
   border-radius: 50%;
-  padding: 0; /* Padding raus, sonst schrumpft Inhalt */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,6 +151,7 @@ body {
 .switch-arrows:hover {
   background-color: #e0e0e0;
 }
+
 .switch-arrows img {
   width: 1.5rem;
   height: 1.5rem;
@@ -153,20 +159,12 @@ body {
   object-fit: contain;
 }
 
-.first-selection, 
+.first-selection,
 .second-selection {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  gap: 0rem; 
-}
-
-.first-selection p, 
-.second-selection p {
-  position: static; 
-  margin: 0.5rem 0 0 0.3rem;
-  font-size: 1rem;
 }
 
 .first-selection p,
@@ -178,20 +176,17 @@ body {
   margin-left: 0.9rem;
 }
 
+/* Dropdowns */
 .from-currency,
 .to-currency {
-  display: flex;
-  flex-direction: column;
   border-radius: 0.5rem;
-  border-color: grey;
-  padding: 2rem 10rem 1.5rem 0.5rem;
+  border: 1px solid grey;
+  padding: 2rem 2rem 1.5rem 2rem;
   font-size: 1.5rem;
-  transition: all 0.3s ease;
   appearance: none;
-  background-image: url("dein-icon.svg");
   background-repeat: no-repeat;
   background-position: left 0.5rem center;
-    padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .from-currency:hover,
@@ -200,35 +195,34 @@ body {
   cursor: pointer;
 }
 
+/* Button */
 .apply {
   display: flex;
   justify-content: center;
 }
 
 .apply button {
-    width: 10rem;
-    height: 3rem;
-    border-radius: 1rem;
-    font-size: 1.2rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
 }
 
 .apply button:hover {
-
-    cursor: pointer;
-    background-color: #e0e0e0;
-
+  cursor: pointer;
+  background-color: #e0e0e0;
 }
 
+/* Ergebnisfeld */
 .result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .result-number {
-    width: 30rem;
-    height: 3rem;
-    font-size: 1.5rem;
-
+  width: 30rem;
+  height: 3rem;
+  font-size: 1.5rem;
 }
