@@ -226,3 +226,12 @@ h1 {
   height: 3rem;
   font-size: 1.5rem;
 }
+
+/* Footer */
+footer {
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  order: 99;
+}
