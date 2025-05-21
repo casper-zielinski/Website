@@ -400,6 +400,148 @@ function Convert(e) {
         return result;
       }
     }
+    else if (selectedTimeUnit === "Months (28 days)") { // von Monaten (28 Tage) in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 2419200);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 40320);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 672);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 28);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime * 4).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime * 0.9198423127).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime * 1.0306885363).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime * 1.0328767123).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 336).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Months (30 days)") { // von Monaten (30 Tage) in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 2592000);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 43200);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 720);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 30);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime * 4.345).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime * 1.0306885363).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime * 1.0306885363).toFixed(10);
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = (inputTime * 1.0328767123).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 360).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+    }
+    else if (selectedTimeUnit === "Months (31 days)") { // von Monaten (31 Tage) in andere Einheiten
+      if (selectedTimeUnit2 === "Seconds") {
+        let result = (inputTime * 2678400);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Minutes") {
+        let result = (inputTime * 44640);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Hours") {
+        let result = (inputTime * 744);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Days") {
+        let result = (inputTime * 31);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Weeks") {
+        let result = (inputTime * 4.345).toFixed(10);
+        outputTime.value = result;
+        return result;
+      } else if (selectedTimeUnit2 === "Months") {
+        let result = (inputTime * 1.0328767123).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (28 days)") {
+        let result = (inputTime * 1.0328767123).toFixed(10);
+        outputTime.value = result;
+        return result;    
+      }
+      else if (selectedTimeUnit2 === "Months (30 days)") {
+        let result = (inputTime * 1.0328767123).toFixed(10);
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Months (31 days)") {
+        let result = inputTime;
+        outputTime.value = result;
+        return result;
+      }
+      else if (selectedTimeUnit2 === "Years") {
+        let result = (inputTime / 372).toFixed(12);
+        outputTime.value = result;
+        return result;
+      }
+    }
     else{
       alert("Bitte eine Zeit eingeben.");
       return;
